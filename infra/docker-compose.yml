@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: streambox-db
+    environment:
+      POSTGRES_DB: streambox
+      POSTGRES_USER: streambox
+      POSTGRES_PASSWORD: streambox
+    ports:
+      - "5433:5432"
+    volumes:
+      - streambox_db_data:/var/lib/postgresql/data
+
+volumes:
+  streambox_db_data:
