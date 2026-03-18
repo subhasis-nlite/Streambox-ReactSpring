@@ -1,0 +1,51 @@
+### GET all
+GET http://localhost:8080/api/v1/media
+
+### CREATE
+POST http://localhost:8080/api/v1/media
+Content-Type: application/json
+
+{
+  "title": "Test Movie",
+  "description": "Testing API",
+  "posterUrl": "https://via.placeholder.com/300x450",
+  "bannerUrl": "https://via.placeholder.com/1200x400",
+  "thumbnailUrl": "https://via.placeholder.com/320x180",
+  "videoUrl": "https://www.w3schools.com/html/movie.mp4",
+  "trailerUrl": "",
+  "genre": "Test",
+  "category": "Demo",
+  "type": "MOVIE",
+  "language": "English",
+  "maturityRating": "PG",
+  "featured": false,
+  "rating": 7.0,
+  "releaseYear": 2024,
+  "durationMinutes": 120
+}
+
+### UPDATE
+PUT http://localhost:8080/api/v1/media/6
+Content-Type: application/json
+
+{
+  "title": "Updated Movie",
+  "description": "Updated",
+  "posterUrl": "https://via.placeholder.com/300x450",
+  "bannerUrl": "https://via.placeholder.com/1200x400",
+  "thumbnailUrl": "https://via.placeholder.com/320x180",
+  "videoUrl": "https://www.w3schools.com/html/movie.mp4",
+  "trailerUrl": "",
+  "genre": "Test",
+  "category": "Demo",
+  "type": "MOVIE",
+  "language": "English",
+  "maturityRating": "PG",
+  "featured": true,
+  "rating": 8.0,
+  "releaseYear": 2024,
+  "durationMinutes": 120
+}
+
+### DELETE
+DELETE http://localhost:8080/api/v1/media/45
